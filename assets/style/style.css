@@ -1,0 +1,410 @@
+html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333;
+    box-sizing: border-box;
+
+}
+
+.wrapper{
+    min-width: 1050px;
+    background-color: #141414;
+    min-height: 100%;
+}
+.SignUpPage{
+    background-color: #efefee;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.column{
+    background-color:#fff;
+    min-height: 300px;
+    max-height: 100%;
+    width: 450px;
+    box-shadow:  0 1px 10px rgb(88, 90, 88);
+    padding: 20px 35px;
+    overflow-y: auto;
+}
+
+.column form {
+    display:  flex;
+    flex-direction: column;
+    padding-top: 24px;
+}
+
+.column form input[type="text"], 
+.column form input[type="email"], 
+.column form input[type="password"]
+{
+    font-size: 14px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 1px solid #dedede;
+}
+
+.column form input[type="submit"]{
+    background-color:rgb(0, 110, 255);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    margin: 10px 0;
+    height: 40px;
+    width: 90px;
+    font-size: 16px;
+}
+
+.column .header {
+    padding: 20px 0;
+}
+
+.column h3 {
+    font-size: 24px;
+    font-weight:400;
+    margin: 0;
+    padding-top: 16px;
+    color: #000000;
+    line-height: 32px;
+
+}
+
+.column h3 span {
+    font-size: 14px;
+}
+
+.column .header img{
+    width: 100px;
+}
+
+.logInMessage{
+font-size: 14px;
+font-weight: 400;
+text-decoration: none;
+}
+
+.errorMessage{
+    color: red;
+}
+
+.previewImage,
+.previewVideo {
+    width: 100%;
+}
+
+.previewContainer{
+    position: relative;
+    display: flex;
+}
+
+
+.previewContainer.small{
+    width: 370px;
+    height: 229px;
+    margin-right: 4px;
+    display: inline-flex;
+}
+.previewContainer.small img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+.previewOverlay{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.034);
+    position: absolute;
+}
+
+.previewOverlay .mainDetail h3 {
+    color: #fff;
+    font-size:40px;
+    margin: 15px 0;
+}
+.previewOverlay .mainDetail h4 {
+    color: #fff;
+    font-size:20px;
+    margin: 15px 0;
+}
+
+.previewOverlay .mainDetail{
+    position: relative;
+    top: 35%;
+    margin-left: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainDetail button{
+    background-color: rgba(51,51,51,0.4);
+    color: #fff;
+    border: none;
+    min-width: 150px;
+    padding: 0 35px;
+    height: 50px;
+    max-height: 50px;
+    font-size:18px;
+    border-radius: 3px;
+    margin: 0 5px 15px 0;
+    cursor: pointer;
+}
+
+.mainDetail button:hover{
+    background-color: rgba(168, 239, 245, 0.541);
+}
+
+.mainDetail button .fas{
+    color: #fff;
+}
+
+.category{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.entities,
+ .videos{
+    overflow-y: hidden;
+    overflow-x:auto;
+    white-space:nowrap;
+}
+
+h3{
+    color: #fff;
+}
+
+a h3:hover{
+    color: #bbf581;
+}
+a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.previewCategories{
+    padding: 0 40px;
+}
+
+.errorBanner{
+    color: #fff;
+    position: absolute;
+    top: 25%;
+    font-size: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+.season{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 50px;
+}
+
+.episodeContainer{
+    display: inline-flex;
+    justify-content: center;
+    margin-right:  4px;
+}
+.episodeContainer .contents{
+    display: flex;
+    flex-direction: column;
+    width: 230px;
+}
+
+.episodeContainer img{
+    width: 230px;
+    height:129px;
+    object-fit: cover;
+}
+.episodeContainer .videoInfo h4,
+.episodeContainer .videoInfo span{
+color: #fff;
+width: 100%;
+white-space: normal;
+}
+
+.episodeContainer .videoInfo{
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+.previewCategories.noScroll .category .entities{
+    white-space:normal;
+}
+
+.watchContainer{
+    width: 100%;
+}
+
+.videoControls{
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background-color:rgba(0, 0, 0, 0.3);
+}
+
+.videoControls h1{
+    color: #fff;
+}
+
+.videoControls button{
+    font-size: 20px;
+    padding: 40px;
+    color: #fff;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.upNext{
+    height: 100%;
+    justify-content: center;
+}
+
+.upNext button {
+    padding: 0;
+}
+
+.upNextContainer h2,
+.upNextContainer h3 {
+    color: #fff;
+}
+
+.watchNav{
+    z-index: 2;
+}
+
+i{
+    color: rgb(97, 199, 66);
+}
+.topBar{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding: 0 60px;
+    height: 70px;
+    box-sizing: border-box;
+    min-width: 1050px;
+    transition: background-color 400ms linear;
+
+}
+
+.topBar.scrolled{
+    background-color: #141414d5;
+    transition: background-color 200ms linear;
+}
+
+.logoContainer{
+    height: 40px;
+}
+
+.logoContainer img{
+    height: 40px;
+}
+
+.navLinks{
+    display: flex;
+    list-style: none;
+}
+
+.navLinks a{
+    color: #fff;
+    font-size: 14px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.rightItems{
+    text-align: right;
+    flex: 1;
+}
+
+.rightItems i{
+    font-size: 20px;
+    margin-right:  10px;
+}
+
+.previewCategories h1{
+    color: #fff;
+}
+
+.textboxContainer{
+    padding: 100px 50px;
+}
+
+.searchInput{
+    height:50px;
+    width: 600px;
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius:3px;
+}
+
+.settingContainer{
+    padding-top: 60px;
+    background-color: transparent;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.settingContainer h2{
+    color: #fff;
+}
+
+.formSection{
+    display: flex;
+    flex-direction: column;
+    margin:  20px 0;
+    border-bottom:  1px solid #fff;
+    padding-bottom: 20px;
+
+}
+.settingContainer form input[type="text"],
+.settingContainer form input[type="email"],
+.settingContainer form input[type="password"]{
+width: 300px;
+height: 40px;
+font-size: 15px;
+margin: 5px 0;
+border: none;
+border-radius: 3px;
+padding:0 5px;
+}
+
+.settingContainer form input[type="submit"]{
+    background-color: #dc1948;
+    width: 100px;
+    height: 40px;
+}
+.alertSuccess,
+.alertError{
+    margin: 10px 0;
+
+}
+
+.alertError{
+    color: #dc1948;
+}
+
+.alertSuccess{
+    color:#bbf581;
+}
+
+.formSection h3{
+    color: #fff;
+}
